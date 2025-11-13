@@ -1,0 +1,87 @@
+/* 전체 화면 꽉 채우기 */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 배경 프레임 이미지를 화면 전체에 맞추기 */
+.frame {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("images/frame.png") no-repeat center center;
+  background-size: cover;  /* 💡 이게 핵심: 화면 비율에 맞게 꽉 채움 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 회색 상자(프레임 안쪽) 위치 조정 */
+.nft-area {
+  position: absolute;
+  top: 28%;           /* 프레임 내 회색 상자 위치 맞춤 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;        /* 가로폭은 화면 비율에 맞게 */
+  max-width: 800px;
+  height: 40vh;       /* 회색 영역 높이 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: "Pretendard", sans-serif;
+}
+
+/* 제목 */
+h2 {
+  margin: 0 0 15px 0;
+  font-size: 1.5rem;
+}
+
+/* NFT 이미지 */
+#nft-image {
+  width: min(200px, 30vw);
+  height: min(200px, 30vw);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* 선택지 버튼 */
+#options button {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #ffffff22;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#options button:hover {
+  background: #ffffff44;
+}
+
+/* 결과 */
+#result {
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+/* 다시하기 버튼 */
+#retry-btn {
+  margin-top: 10px;
+  background: #00c896;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
